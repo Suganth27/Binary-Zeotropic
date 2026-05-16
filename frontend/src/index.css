@@ -1,0 +1,57 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom styles for the dashboard */
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #0d1117;
+  color: #c9d1d9;
+}
+
+.card {
+  background-color: #161b22;
+  border: 1px solid #30363d;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.text-gradient {
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.gauge-chart .arc {
+  stroke-width: 10;
+  fill: none;
+}
+
+.gauge-chart .needle {
+  fill: #00c6ff;
+  stroke: #0072ff;
+  stroke-width: 2;
+}
+
+.recharts-wrapper .recharts-surface {
+  overflow: visible;
+}
+
+.recharts-cartesian-axis-line,
+.recharts-cartesian-axis-tick-line,
+.recharts-dot,
+.recharts-active-dot {
+  stroke: #666;
+}
+
+.recharts-tooltip-wrapper {
+  background-color: rgba(22, 27, 34, 0.9);
+  border: 1px solid #30363d;
+  border-radius: 4px;
+  color: #c9d1d9;
+}
+
+.recharts-legend-wrapper {
+  color: #c9d1d9;
+}
