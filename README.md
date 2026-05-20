@@ -11,13 +11,13 @@ The dashboard serves as a high fidelity prototype for real time monitoring, visu
 
 ## 🚀 Key Features
 
-### 1. Real Time Sensor Monitoring
-- **Live IoT Data:** Visualizes critical parameters including temperatures (Solar Collector, Evaporator, Condenser, Compressor), pressures, flow rates, and ambient conditions.
-- **Dynamic Updates:** Simulated sensor values refresh every 3 seconds to demonstrate real time behavior.
+### 1. Real Time Sensor Monitoring (Simulation is done for now)
+- **Live Data Visualization:** Visualizes critical parameters including temperatures (Solar Collector, Evaporator, Condenser, Compressor), pressures, flow rates and ambient conditions.
+- **Dynamic Simulation:** For this prototype, the dashboard uses **high fidelity mock data** that refreshes every 3 seconds to demonstrate real time IoT behavior.
 - **Status Indicators:** Color coded status (Normal, Warning, Critical) based on experimental thresholds.
 
 ### 2. Refrigerant Performance Analysis
-- **Binary Mixture Comparison:** Side by side performance analytics for **R134a** vs. **Binary Zeotropic Mixtures**.
+- **Binary Mixture Comparison:** Side by side performance analytics for **R134a** vs **Binary Zeotropic Mixtures**.
 - **Engineering Metrics:** Comparative charts for COP (Coefficient of Performance), Energy Consumption, Heat Transfer Rates and Exergy Efficiency.
 - **Advanced Filtering:** Ability to filter data by experimental runs and time ranges.
 
@@ -44,7 +44,7 @@ The dashboard serves as a high fidelity prototype for real time monitoring, visu
 - **Visualization:** [Recharts](https://recharts.org/)
 - **Icons:** [Lucide React](https://lucide.dev/)
 - **Backend:** [Node.js](https://nodejs.org/) + [Express](https://expressjs.com/)
-- **Data:** Simulated IoT Mock API (JSON-based)
+- **Data:** Simulated IoT Mock API (Logic based simulation in Frontend)
 
 ---
 
@@ -56,7 +56,7 @@ Binary-Zeotropic/
 │   ├── src/
 │   │   ├── components/   # Reusable UI components (Navbar, Sidebar)
 │   │   ├── pages/        # Main dashboard views
-│   │   ├── hooks/        # Custom React hooks (Real-time data logic)
+│   │   ├── hooks/        # Custom React hooks (Real time data logic)
 │   │   ├── mockData/     # Simulation logic for IoT sensors
 │   │   └── index.css     # Global styles & Tailwind config
 ├── backend/              # Node.js API Server
@@ -110,9 +110,14 @@ To see the dashboard in action, you need to run the development server:
 
 ---
 
-## 🔬 Research Context
+## 🔬 Research Context & Prototype Status
 
-This dashboard is designed to support laboratory scale experimental investigations. It provides a visual bridge between complex thermodynamic data and actionable system insights, specifically focusing on the performance improvements gained by using zeotropic mixtures in solar assisted desalination cycles.
+**Note:** This repository currently functions as a **high fidelity UI/UX prototype**. 
+
+- **Data Source:** All sensor readings, energy metrics and refrigerant performance data are currently generated via simulation logic within the frontend. This allows for immediate testing and demonstration of the UI's capabilities.
+- **Future Integration:** The architecture is designed to be easily swapped with real IoT sensor data. The `backend` Express server is included as a skeleton to facilitate future integration with real time hardware signals or a database.
+
+The dashboard provides a visual bridge between complex thermodynamic data and actionable system insights, specifically focusing on the performance improvements gained by using zeotropic mixtures in solar assisted desalination cycles.
 
 ---
 
